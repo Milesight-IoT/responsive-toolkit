@@ -1,0 +1,27 @@
+{
+    "name": "@milesight/responsive-react",
+    "version": "0.0.1",
+    "description": "React hooks and components for building responsive websites.",
+    "license": "MIT",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "echo \"No dev script provided for this package.\"",
+        "build": "echo \"No build script provided for this package.\"",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "coverage": "vitest run --coverage"
+    },
+    "peerDependencies": {
+        "react": "^17 || ^18 || ^19"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.0",
+        "@vitest/coverage-v8": "^3.0.7",
+        "react": "^18.2.0",
+        "tsup": "^8.4.0",
+        "typescript": "^5.8.2",
+        "vitest": "^3.0.7"
+    }
+}

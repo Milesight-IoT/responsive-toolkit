@@ -1,0 +1,25 @@
+{
+    "name": "@milesight/json2mq",
+    "version": "1.0.0",
+    "description": "Convert JSON data to media query string",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "tsup --watch",
+        "build": "tsup",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "coverage": "vitest run --coverage"
+    },
+    "devDependencies": {
+        "@vitest/coverage-v8": "^3.0.7",
+        "tsup": "^8.4.0",
+        "typescript": "^5.8.2",
+        "vitest": "^3.0.7"
+    }
+}

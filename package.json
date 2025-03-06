@@ -4,23 +4,7 @@
     "description": "A powerful, accessible, developer friendly Toolkit for building responsive websites.",
     "license": "MIT",
     "scripts": {
-        "build": "sass ./src/scss/index.scss ./dist/style/index.css"
-    },
-    "devDependencies": {
-        "rollup": "^4.34.9",
-        "rollup-plugin-peer-deps-external": "^2.2.4",
-        "sass": "^1.85.1"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+        "dev": "pnpm --filter=@milesight/* -r run dev",
+        "build": "pnpm --filter=@milesight/* -r run build"
     }
 }
