@@ -5,6 +5,10 @@
     "license": "MIT",
     "scripts": {
         "dev": "pnpm --filter=@milesight/* -r run dev",
-        "build": "pnpm --filter=@milesight/* -r run build"
+        "build": "pnpm --filter=@milesight/* -r run build",
+        "changeset": "changeset"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.28.1"
     }
 }
