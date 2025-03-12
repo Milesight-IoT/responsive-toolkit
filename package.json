@@ -1,12 +1,14 @@
 {
     "name": "@milesight/responsive-toolkit",
-    "version": "0.0.1",
-    "description": "A powerful, accessible, developer friendly Toolkit for building responsive websites.",
+    "description": "A powerful Toolkit for building responsive websites.",
     "license": "MIT",
     "scripts": {
         "dev": "pnpm --filter=@milesight/* -r run dev",
         "build": "pnpm --filter=@milesight/* -r run build",
-        "changeset": "changeset"
+        "changeset": "changeset",
+        "docs:dev": "pnpm --stream --filter=docs dev",
+        "docs:build": "pnpm --stream --filter=docs build",
+        "docs:preview": "pnpm --stream --filter=docs preview"
     },
     "devDependencies": {
         "@changesets/cli": "^2.28.1"
