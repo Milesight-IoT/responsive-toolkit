@@ -22,15 +22,16 @@
 // Responsive sticky top and bottom
 @each $breakpoint in map.keys(var.$grid-breakpoints) {
     @include bp.media-breakpoint-up($breakpoint) {
-        $infix: bp.breakpoint-infix($breakpoint, var.$grid-breakpoints);
+        // $infix: bp.breakpoint-infix($breakpoint, var.$grid-breakpoints);
+        $prefix: bp.breakpoint-prefix($breakpoint, var.$grid-breakpoints);
 
-        .sticky#{$infix}-top {
+        .#{$prefix}sticky-top {
             position: sticky;
             top: 0;
             z-index: var.$zindex-sticky;
         }
 
-        .sticky#{$infix}-bottom {
+        .#{$prefix}sticky-bottom {
             position: sticky;
             bottom: 0;
             z-index: var.$zindex-sticky;

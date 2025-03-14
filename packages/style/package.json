@@ -7,14 +7,14 @@
         "dist",
         "scss"
     ],
-    "main": "dist/index.css",
     "exports": {
+        "default": "./dist/index.css",
         "scss": "./scss/index.scss",
         "sass": "./scss/index.scss"
     },
     "scripts": {
-        "dev": "sass --watch scss:dist/index.scss",
-        "build": "sass scss:dist/index.scss"
+        "dev": "sass --watch scss:dist",
+        "build": "sass scss:dist"
     },
     "devDependencies": {
         "sass": "^1.85.1"
