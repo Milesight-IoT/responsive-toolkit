@@ -3,8 +3,8 @@
     "description": "A powerful Toolkit for building responsive websites.",
     "license": "MIT",
     "scripts": {
-        "dev": "pnpm --filter=@milesight/* -r run dev",
-        "build": "pnpm --filter=@milesight/* -r run build",
+        "dev": "pnpm -r run dev",
+        "build": "pnpm -r run build",
         "changeset": "changeset",
         "docs:dev": "pnpm --stream --filter=docs dev",
         "docs:build": "pnpm --stream --filter=docs build",
