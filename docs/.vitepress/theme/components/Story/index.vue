@@ -11,7 +11,13 @@ import IconFullscreen from '../icons/Fullscreen.vue';
 import IconFullscreenExit from '../icons/FullscreenExit.vue';
 import IconCheck from '../icons/Check.vue';
 import { copyText } from '../../utils/copy';
-import { CODE_THEMES, TOOLBAR_HEIGHT, CODE_FRAME_MIN_WIDTH } from './constants';
+import {
+  CODE_THEMES,
+  TOOLBAR_HEIGHT,
+  CODE_FRAME_DEFAULT_WIDTH,
+  CODE_FRAME_DEFAULT_HEIGHT,
+  CODE_FRAME_MIN_WIDTH,
+} from './constants';
 import "vue-draggable-resizable/style.css";
 
 defineProps({
@@ -70,20 +76,18 @@ const mainEle = useTemplateRef<HTMLElement>('main');
 const { isFullscreen, toggle } = useFullscreen(mainEle);
 
 // ---------- Resize ----------
-// const size = ref({ width: 600, height: 150 });
 const { width: containerWidth, height: containerHeight } = useElementSize(mainEle);
-const frameSize = ref({ width: 600, height: 150 });
+const frameSize = ref({ width: CODE_FRAME_DEFAULT_WIDTH, height: CODE_FRAME_DEFAULT_HEIGHT });
 const handleResize = (...$event) => {
   frameSize.value = { width: $event[2], height: $event[3] };
 };
 
 watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullscreen]) => {
   frameSize.value = {
-    width: Math.round(width * 0.9),
-    height: !isFullscreen ? 150 : height - TOOLBAR_HEIGHT,
+    width: Math.round(width * 0.9) || CODE_FRAME_DEFAULT_WIDTH,
+    height: (!isFullscreen || !height) ? 150 : height - TOOLBAR_HEIGHT,
   };
 });
-
 </script>
 
 <template>
