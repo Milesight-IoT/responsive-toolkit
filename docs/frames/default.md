@@ -19,13 +19,15 @@ onMounted(() => {
 <!-- empty file to keep vitepress happy. see FrameDefaultLayout.vue -->
 <div id="vp-app" class="frame-default" ref="el"></div>
 
-<style>
+<style lang="scss" scoped>
 .frame-default {
   position: relative;
   padding: 1.25rem;
 }
 
-.frame-default [class*="col"] {
-  border: 1px solid #ccc;
+.frame-default :deep() {
+  [class*="col"] {
+    border: 1px solid var(--vp-c-divider);
+  }
 }
 </style>

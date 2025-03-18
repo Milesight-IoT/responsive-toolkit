@@ -11,7 +11,7 @@ import IconFullscreen from '../icons/Fullscreen.vue';
 import IconFullscreenExit from '../icons/FullscreenExit.vue';
 import IconCheck from '../icons/Check.vue';
 import { copyText } from '../../utils/copy';
-import { CODE_THEMES, TOOLBAR_HEIGHT } from './constants';
+import { CODE_THEMES, TOOLBAR_HEIGHT, CODE_FRAME_MIN_WIDTH } from './constants';
 import "vue-draggable-resizable/style.css";
 
 defineProps({
@@ -95,7 +95,11 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
         :handles="['mr']"
         :w="frameSize.width"
         :h="frameSize.height"
-        :min-width="320"
+        :min-width="
+          containerWidth < CODE_FRAME_MIN_WIDTH
+            ? Math.round(containerWidth * 0.8)
+            : CODE_FRAME_MIN_WIDTH
+        "
         :max-width="containerWidth"
         @resizing="handleResize"
         @resize-stop="handleResize"
@@ -190,6 +194,7 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
     position: relative;
     height: 150px;
     border: none;
+    background-color: var(--vp-c-bg);
     overflow: hidden;
 
     &.resizing {
@@ -197,6 +202,10 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
         position: absolute;
         inset: 0;
         content: '';
+      }
+
+      .story-frame-size-mark {
+        display: block;
       }
 
       :deep(.handle) {
@@ -228,6 +237,7 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
 
         &-mr {
           right: 0;
+          height: 12px;
           border: none;
           background: transparent;
 
@@ -236,6 +246,7 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
             position: absolute;
             border-left: 2px solid currentColor;
             height: 100%;
+            top: 0;
             left: 1px;
           }
 
@@ -244,6 +255,7 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
             position: absolute;
             border-left: 2px solid currentColor;
             height: 100%;
+            top: 0;
             right: 3px;
           }
         }
