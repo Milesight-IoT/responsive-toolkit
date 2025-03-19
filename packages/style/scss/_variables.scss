@@ -11,14 +11,12 @@ $enable-container-classes: true !default;
 $enable-rfs: true !default;
 $enable-negative-margins: false !default;
 
-
 // ---------- Spacing ----------
 //
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 $spacer: 1rem !default;
-
 
 // ---------- Grid breakpoints ----------
 //
@@ -29,10 +27,8 @@ $grid-breakpoints: (
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1200px,
-    // xxl: 1400px
+    xl: 1200px, // xxl: 1400px
 ) !default;
-
 
 // ---------- Grid containers ----------
 //
@@ -41,10 +37,8 @@ $container-max-widths: (
     sm: 540px,
     md: 720px,
     lg: 960px,
-    xl: 1140px,
-    // xxl: 1320px
+    xl: 1140px, // xxl: 1320px
 ) !default;
-
 
 // ---------- Grid columns ----------
 //
@@ -56,14 +50,13 @@ $grid-row-columns: 6 !default;
 $include-column-box-sizing: true !default;
 $container-padding-x: $grid-gutter-width !default;
 
-
 // ---------- Typography ----------
 //
 // Font, line-height, and color for body text, headings, and more.
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 $font-size-root: null !default;
 $font-size-default: 1rem !default;
-$font-size-sm: $font-size-default * .875 !default;
+$font-size-sm: $font-size-default * 0.875 !default;
 $font-size-md: $font-size-default !default;
 $font-size-lg: $font-size-default * 1.25 !default;
 $font-size-base: $font-size-md !default;
@@ -81,9 +74,8 @@ $font-sizes: (
     3: $h3-font-size,
     4: $h4-font-size,
     5: $h5-font-size,
-    6: $h6-font-size
+    6: $h6-font-size,
 ) !default;
-
 
 // ---------- Helpers ----------
 $zindex-fixed: 1000 !default;
@@ -93,5 +85,5 @@ $aspect-ratios: (
     '1x1': 100%,
     '4x3': calc(3 / 4 * 100%),
     '16x9': calc(9 / 16 * 100%),
-    '21x9': calc(9 / 21 * 100%)
+    '21x9': calc(9 / 21 * 100%),
 ) !default;

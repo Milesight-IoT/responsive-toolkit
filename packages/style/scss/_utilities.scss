@@ -1,4 +1,3 @@
-
 @use 'sass:map';
 @use 'sass:meta';
 @use 'variables' as *;
@@ -16,7 +15,6 @@
 
         // Loop over each utility property
         @each $key, $utility in $utilities {
-
             // The utility can be disabled with `false`, thus check if the utility is a map first
             // Only proceed if responsive media queries are enabled or if it's the base media query
             @if meta.type-of($utility) == 'map' and (map.get($utility, responsive) or $prefix == '') {
@@ -33,20 +31,21 @@
         $prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
 
         @if (map.get($grid-breakpoints, $breakpoint) < $rfs-breakpoint) {
-
             // Loop over each utility property
             @each $key, $utility in $utilities {
-
                 // The utility can be disabled with `false`, thus check if the utility is a map first
                 // Only proceed if responsive media queries are enabled or if it's the base media query
-                @if meta.type-of($utility) == 'map' and map.get($utility, rfs) and (map.get($utility, responsive) or $prefix == '') {
+                @if meta.type-of($utility) ==
+                    'map' and
+                    map.get($utility, rfs) and
+                    (map.get($utility, responsive) or $prefix == '')
+                {
                     @include generate-utility($utility, $prefix, true);
                 }
             }
         }
     }
 }
-
 
 // ---------- Print utilities ----------
 @media print {

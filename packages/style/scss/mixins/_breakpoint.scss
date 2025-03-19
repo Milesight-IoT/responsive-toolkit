@@ -48,7 +48,7 @@
 //    767.98px
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
     $max: map.get($breakpoints, $name);
-    @return if($max and $max > 0, $max - .02, null);
+    @return if($max and $max > 0, $max - 0.02, null);
 }
 
 // Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
@@ -82,9 +82,7 @@
         @media (min-width: $min) {
             @content;
         }
-    }
-
-    @else {
+    } @else {
         @content;
     }
 }
@@ -98,9 +96,7 @@
         @media (max-width: $max) {
             @content;
         }
-    }
-
-    @else {
+    } @else {
         @content;
     }
 }
@@ -115,15 +111,11 @@
         @media (min-width: $min) and (max-width: $max) {
             @content;
         }
-    }
-
-    @else if $max == null {
+    } @else if $max == null {
         @include media-breakpoint-up($lower, $breakpoints) {
             @content;
         }
-    }
-
-    @else if $min == null {
+    } @else if $min == null {
         @include media-breakpoint-down($upper, $breakpoints) {
             @content;
         }
@@ -142,15 +134,11 @@
         @media (min-width: $min) and (max-width: $max) {
             @content;
         }
-    }
-
-    @else if $max == null {
+    } @else if $max == null {
         @include media-breakpoint-up($name, $breakpoints) {
             @content;
         }
-    }
-
-    @else if $min == null {
+    } @else if $min == null {
         @include media-breakpoint-down($next, $breakpoints) {
             @content;
         }

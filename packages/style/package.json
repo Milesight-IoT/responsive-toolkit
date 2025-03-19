@@ -14,9 +14,14 @@
     },
     "scripts": {
         "dev": "sass --watch scss:dist",
-        "build": "sass scss:dist"
+        "build": "sass scss:dist",
+        "lint": "eslint ./scss/* ",
+        "lint:fix": "eslint --fix ./scss/*"
     },
     "devDependencies": {
+        "@antfu/eslint-config": "^4.10.1",
+        "eslint": "^9.22.0",
+        "eslint-plugin-format": "^1.0.1",
         "sass": "^1.85.1"
     }
 }
