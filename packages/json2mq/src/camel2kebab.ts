@@ -7,11 +7,11 @@ import type { CamelToKebab } from './typings';
  * @returns The kebab-separated string.
  */
 const camel2kebab = <T extends string>(str: T): CamelToKebab<T> => {
-  return str
-    .replace(/[A-Z]/g, (match) => {
-      return '-' + match.toLowerCase();
-    })
-    .toLowerCase() as CamelToKebab<T>;
+    return str
+        .replace(/[A-Z]/g, (match) => {
+            return `-${match.toLowerCase()}`;
+        })
+        .toLowerCase() as CamelToKebab<T>;
 };
 
 export default camel2kebab;

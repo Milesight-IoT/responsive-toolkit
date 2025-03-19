@@ -1,5 +1,6 @@
-import camel2kebab from './camel2kebab';
 import type { ToMediaQuery } from './typings';
+
+import camel2kebab from './camel2kebab';
 
 /**
  * Checks if the given feature name is a dimension property (e.g., height or width).
@@ -7,7 +8,7 @@ import type { ToMediaQuery } from './typings';
  * @returns {boolean} - Returns true if the feature name is a dimension property, otherwise false.
  */
 export const isDimension = (feature: string): boolean => {
-    const re = /[height|width]$/;
+    const re = /^width|height$/;
     return re.test(feature);
 };
 
@@ -28,9 +29,11 @@ export const obj2mq = (obj: Record<string, any>): string => {
         }
         if (value === true) {
             mq += feature;
-        } else if (value === false) {
+        }
+        else if (value === false) {
             mq += `not ${feature}`;
-        } else {
+        }
+        else {
             mq += `(${feature}: ${value})`;
         }
         if (index < features.length - 1) {
@@ -46,9 +49,9 @@ export const obj2mq = (obj: Record<string, any>): string => {
  * @returns {string} - The generated media query string.
  */
 export const json2mq = <
-  T extends string | Record<string, any> | Record<string, any>[]
+    T extends string | Record<string, any> | Record<string, any>[],
 >(
-  query: T
+    query: T,
 ): ToMediaQuery<T> => {
     let mq = '';
     if (typeof query === 'string') {
