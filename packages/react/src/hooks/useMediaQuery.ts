@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 
 /** Hook options. */
-type UseMediaQueryOptions = {
+interface UseMediaQueryOptions {
     /**
      * The default value to return if the hook is being run on the server.
      * @default false
@@ -14,7 +14,7 @@ type UseMediaQueryOptions = {
      * @default true
      */
     initializeWithValue?: boolean;
-};
+}
 
 const IS_SERVER = typeof window === 'undefined';
 
@@ -34,7 +34,7 @@ export function useMediaQuery(
     {
         defaultValue = false,
         initializeWithValue = true,
-    }: UseMediaQueryOptions = {}
+    }: UseMediaQueryOptions = {},
 ): boolean {
     const getMatches = (query: string): boolean => {
         if (IS_SERVER) {
@@ -50,7 +50,7 @@ export function useMediaQuery(
         return defaultValue;
     });
 
-  // Handles the change event of the media query.
+    // Handles the change event of the media query.
     function handleChange() {
         setMatches(getMatches(query));
     }
@@ -64,14 +64,16 @@ export function useMediaQuery(
         // Use deprecated `addListener` and `removeListener` to support Safari < 14 (#135)
         if (matchMedia.addListener) {
             matchMedia.addListener(handleChange);
-        } else {
+        }
+        else {
             matchMedia.addEventListener('change', handleChange);
         }
 
         return () => {
             if (matchMedia.removeListener) {
                 matchMedia.removeListener(handleChange);
-            } else {
+            }
+            else {
                 matchMedia.removeEventListener('change', handleChange);
             }
         };
