@@ -1,0 +1,3 @@
+{
+    "{.vitepress,frames,en,zh}/**/*.{js,ts,vue,css,md}": "pnpm run lint:fix"
+}

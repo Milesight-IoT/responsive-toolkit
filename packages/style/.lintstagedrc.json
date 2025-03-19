@@ -1,0 +1,3 @@
+{
+    "scss/**/*.{css,scss}": "pnpm run lint:fix"
+}

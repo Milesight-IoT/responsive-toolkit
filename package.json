@@ -8,9 +8,16 @@
         "changeset": "changeset",
         "docs:dev": "pnpm --stream --filter=docs dev",
         "docs:build": "pnpm --stream --filter=docs build",
-        "docs:preview": "pnpm --stream --filter=docs preview"
+        "docs:preview": "pnpm --stream --filter=docs preview",
+        "prepare": "husky",
+        "commitlint": "commitlint",
+        "lint-staged": "lint-staged"
     },
     "devDependencies": {
-        "@changesets/cli": "^2.28.1"
+        "@changesets/cli": "^2.28.1",
+        "@commitlint/cli": "^19.8.0",
+        "@commitlint/config-conventional": "^19.8.0",
+        "husky": "^9.1.5",
+        "lint-staged": "^15.2.0"
     }
 }
