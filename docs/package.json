@@ -5,13 +5,19 @@
     "scripts": {
         "dev": "vitepress dev",
         "build": "vitepress build",
-        "preview": "vitepress preview"
+        "preview": "vitepress preview",
+        "lint": "eslint .vitepress/config .vitepress/theme ./zh ./en ./frames",
+        "lint:fix": "eslint --fix .vitepress/config .vitepress/theme ./zh ./en ./frames"
     },
     "devDependencies": {
+        "@antfu/eslint-config": "^4.10.1",
         "@milesight/responsive-style": "workspace:*",
+        "@types/node": "^20.12.1",
         "@vueuse/core": "^13.0.0",
         "@whyframe/core": "^0.1.12",
         "@whyframe/vue": "^0.1.7",
+        "eslint": "^9.22.0",
+        "eslint-plugin-format": "^1.0.1",
         "sass": "^1.85.1",
         "shiki": "^3.2.1",
         "vitepress": "^1.6.3",

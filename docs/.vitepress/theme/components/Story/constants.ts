@@ -2,8 +2,8 @@
  * The code story theme.
  */
 export const CODE_THEMES = {
-  light: "github-light",
-  dark: "github-dark",
+    light: 'github-light',
+    dark: 'github-dark',
 };
 
 /**
