@@ -141,12 +141,29 @@
     }
 }
 
-@mixin make-cssgrid($columns: var.$grid-columns, $breakpoints: var.$grid-breakpoints) {
+@mixin make-cssgrid($rows: var.$cssgrid-rows, $columns: var.$grid-columns, $breakpoints: var.$grid-breakpoints) {
     @each $breakpoint in map.keys($breakpoints) {
         // $infix: breakpoint-infix($breakpoint, $breakpoints);
         $prefix: breakpoint-prefix($breakpoint, $breakpoints);
 
         @include media-breakpoint-up($breakpoint, $breakpoints) {
+            @if $rows > 0 {
+                @for $i from 1 through $rows {
+                    .#{$prefix}g-row-#{$i} {
+                        grid-row: span $i / span $i;
+                    }
+                }
+
+                @for $i from 1 through $rows {
+                    .#{$prefix}g-rs-#{$i} {
+                        grid-row-start: $i;
+                    }
+                    .#{$prefix}g-re-#{$i} {
+                        grid-row-end: $i;
+                    }
+                }
+            }
+
             @if $columns > 0 {
                 @for $i from 1 through $columns {
                     .#{$prefix}g-col-#{$i} {

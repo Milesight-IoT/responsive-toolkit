@@ -5,7 +5,7 @@ $prefix: ms- !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-grid-classes: true !default;
-$enable-cssgrid: false !default;
+$enable-cssgrid: true !default;
 $enable-important-utilities: true !default;
 $enable-container-classes: true !default;
 $enable-rfs: true !default;
@@ -46,6 +46,7 @@ $container-max-widths: (
 $grid-columns: 12 !default;
 $grid-gutter-width: 1.5rem !default;
 $grid-row-columns: 6 !default;
+$cssgrid-rows: 6 !default;
 
 $include-column-box-sizing: true !default;
 $container-padding-x: $grid-gutter-width !default;
