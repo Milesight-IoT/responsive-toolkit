@@ -22,12 +22,44 @@ onMounted(() => {
 <style lang="scss" scoped>
 .frame-default {
   position: relative;
-  padding: 1.25rem;
 }
 
 .frame-default :deep() {
-  [class*="col"] {
+  /**********  Atomic class **********/
+  .border-soft {
     border: 1px solid var(--vp-c-divider);
+  }
+
+  .border-brand {
+    border: 1px solid var(--vp-c-brand-3);
+  }
+
+  .bg-soft {
+    background-color: var(--vp-c-brand-soft);
+  }
+
+  .bg-gray {
+    background-color: var(--vp-c-gray-soft);
+  }
+
+  .rounded-soft {
+    border-radius: 0.25rem;
+  }
+
+  /**********  Demo Block **********/
+  .demo-columns {
+    [class*="col"] {
+      border: 1px solid var(--vp-c-brand-3);
+      background-color: var(--vp-c-brand-soft);
+    }
+  }
+
+  .demo-grid {
+    > div,
+    [class*="g-col"] {
+      border: 1px solid var(--vp-c-brand-3);
+      background-color: var(--vp-c-brand-soft);
+    }
   }
 }
 </style>

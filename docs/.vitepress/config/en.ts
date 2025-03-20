@@ -53,8 +53,8 @@ export const en = defineConfig({
                                 link: 'start/install',
                             },
                             {
-                                text: 'Developing',
-                                link: 'start/developing',
+                                text: 'Customize',
+                                link: 'start/customize',
                             },
                             {
                                 text: 'Browser Support',
@@ -84,10 +84,6 @@ export const en = defineConfig({
                             {
                                 text: 'Grid',
                                 link: 'layout/grid',
-                            },
-                            {
-                                text: 'CSS Grid',
-                                link: 'layout/css-grid',
                             },
                             {
                                 text: 'Gutters',

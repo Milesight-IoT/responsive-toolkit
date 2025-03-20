@@ -1,3 +1,7 @@
+---
+order: 100
+---
+
 # Layout Basics
 
 UI layout should be dynamic. When the display environment changes such as landscape/portrait mode switching, font size adjustment, or split-screen occurs, the content layout should adapt to the changes in a timely manner.

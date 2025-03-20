@@ -25,7 +25,7 @@ import 'vue-draggable-resizable/style.css';
 defineProps({
     title: {
         type: String,
-        required: true,
+        default: '',
     },
     lang: {
         type: String,
@@ -236,7 +236,7 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
 
         :deep() {
             .handle {
-                color: var(--vp-c-divider);
+                color: var(--vp-c-gray-1);
 
                 &:hover {
                     color: var(--vp-c-brand-3);
@@ -298,6 +298,7 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
         padding: 0;
         margin: 0;
         padding: 0 0.5rem;
+        font-size: 0.875rem;
         font-weight: 500;
     }
 
