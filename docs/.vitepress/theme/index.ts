@@ -7,8 +7,6 @@ import DefaultTheme from 'vitepress/theme';
 import Story from './components/Story/index.vue';
 import './style.css';
 
-import '@milesight/responsive-style';
-
 export default {
     extends: DefaultTheme,
     // Layout: () => {

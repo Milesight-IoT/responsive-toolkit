@@ -2,4 +2,4 @@
 order: 100
 ---
 
-# Installation
+# Quick Start

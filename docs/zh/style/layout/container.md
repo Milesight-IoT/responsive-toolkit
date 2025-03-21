@@ -23,9 +23,9 @@ Responsive Style 中有三种不同的容器：
 | `.xl:container`    |    100%    |    100%    |    100%    |    100%    | **1140px**  |
 | `.container-fluid` |    100%    |    100%    |    100%    |    100%    |    100%     |
 
-## 示例
+## 基础用法
 
-<Story title="Layout">
+<Story title="基础用法">
 <div class="container my-2 rounded-soft bg-soft">
     <h5>Container</h5>
 </div>

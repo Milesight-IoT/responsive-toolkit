@@ -82,8 +82,8 @@ order: 230
 
 <Story title="网格排序">
 <div class="demo-grid grid text-center my-5">
-  <div class="g-col-3 md:g-start-3">.g-col-3 .md:g-start-3</div>
-  <div class="g-col-4 g-start-6">.g-col-4 .g-start-6</div>
+  <div class="g-col-3 md:g-cs-3">.g-col-3 .md:g-cs-3</div>
+  <div class="g-col-4 g-cs-6">.g-col-4 .g-cs-6</div>
 </div>
 </Story>
 
@@ -153,9 +153,9 @@ order: 230
 </div>
 </Story>
 
-## 复杂混合布局
+## 响应式布局
 
-结合 `.d-*` 工具类及响应式前缀，可以创建复杂的混合布局。
+结合 `.d-*` 工具类及响应式前缀，可以创建复杂的响应式布局。
 
 <Story title="复杂混合布局">
 <div class="demo-grid grid row-gap-2 text-center my-5">
@@ -179,3 +179,50 @@ order: 230
   </div>
 </div>
 </Story>
+
+## 速查表
+
+| 类名        | 样式                          |
+| ----------- | ----------------------------- |
+| `.grid`     | `display: grid`               |
+| `.g-row-1`  | `grid-row: span 1 / span 1`   |
+| `.g-row-2`  | `grid-row: span 2 / span 2`   |
+| `.g-row-3`  | `grid-row: span 3 / span 3`   |
+| `.g-row-4`  | `grid-row: span 4 / span 4`   |
+| `.g-row-5`  | `grid-row: span 5 / span 5`   |
+| `.g-row-6`  | `grid-row: span 6 / span 6`   |
+| `.g-rs-2`   | `grid-row-start: 2`           |
+| `.g-rs-3`   | `grid-row-start: 3`           |
+| `.g-rs-4`   | `grid-row-start: 4`           |
+| `.g-rs-5`   | `grid-row-start: 5`           |
+| `.g-rs-6`   | `grid-row-start: 6`           |
+| `.g-re-2`   | `grid-row-end: 2`             |
+| `.g-re-3`   | `grid-row-end: 3`             |
+| `.g-re-4`   | `grid-row-end: 4`             |
+| `.g-re-5`   | `grid-row-end: 5`             |
+| `.g-re-6`   | `grid-row-end: 6`             |
+| `.g-col-1`  | `grid-column: auto / span 1`  |
+| `.g-col-2`  | `grid-column: auto / span 2`  |
+| `.g-col-3`  | `grid-column: auto / span 3`  |
+| `.g-col-4`  | `grid-column: auto / span 4`  |
+| `.g-col-5`  | `grid-column: auto / span 5`  |
+| `.g-col-6`  | `grid-column: auto / span 6`  |
+| `.g-col-7`  | `grid-column: auto / span 7`  |
+| `.g-col-8`  | `grid-column: auto / span 8`  |
+| `.g-col-9`  | `grid-column: auto / span 9`  |
+| `.g-col-10` | `grid-column: auto / span 10` |
+| `.g-col-11` | `grid-column: auto / span 11` |
+| `.g-col-12` | `grid-column: auto / span 12` |
+| `.g-cs-1`   | `grid-column-start: 1`        |
+| `.g-cs-2`   | `grid-column-start: 2`        |
+| `.g-cs-3`   | `grid-column-start: 3`        |
+| `.g-cs-4`   | `grid-column-start: 4`        |
+| `.g-cs-5`   | `grid-column-start: 5`        |
+| `.g-cs-6`   | `grid-column-start: 6`        |
+| `.g-cs-7`   | `grid-column-start: 7`        |
+| `.g-cs-8`   | `grid-column-start: 8`        |
+| `.g-cs-9`   | `grid-column-start: 9`        |
+| `.g-cs-10`  | `grid-column-start: 10`       |
+| `.g-cs-11`  | `grid-column-start: 11`       |
+
+> 以上所有类均支持响应式前缀，如 `sm:`, `md:`, `lg:`, `xl:`。

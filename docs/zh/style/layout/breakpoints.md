@@ -37,3 +37,28 @@ $grid-breakpoints: (
     xl: 1200px,
 ) !default;
 ```
+
+## 如何使用
+
+Responsive Style 中提供的所有工具类都支持响应式类前缀，所以你可以大胆的在本文档列举的所有工具类前加上断点前缀，以实现在不同断点下的样式调整。
+
+需注意的是，Responsive Style 遵循的是「**移动优先**」原则，这意味着如果一个样式类若无任何断点前缀，则该样式将在所有断点下生效。举个例子：
+
+<Story title="断点隐藏" defaultShowCode>
+<div class="demo-bps text-center p-4">
+  <div class="d-none my-2"><b>Hide</b> on all screens</div>
+  <div class="sm:d-none my-2"><b>Hide</b> on lg and wider screens</div>
+  <div class="md:d-none my-2"><b>Hide</b> on md and wider screens</div>
+  <div class="lg:d-none my-2"><b>Hide</b> on lg and wider screens</div>
+  <div class="xl:d-none my-2"><b>Hide</b> on xl and wider screens</div>
+</div>
+</Story>
+
+<Story title="断点显示" defaultShowCode>
+<div class="demo-bps text-center p-4">
+  <div class="d-none sm:d-block my-2"><b>Show</b> on sm and wider screens</div>
+  <div class="d-none md:d-block my-2"><b>Show</b> on md and wider screens</div>
+  <div class="d-none lg:d-block my-2"><b>Show</b> on lg and wider screens</div>
+  <div class="d-none xl:d-block my-2"><b>Show</b> on xl and wider screens</div>
+</div>
+</Story>

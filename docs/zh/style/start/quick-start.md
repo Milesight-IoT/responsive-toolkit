@@ -2,4 +2,4 @@
 order: 100
 ---
 
-# Installation
+# 快速开始

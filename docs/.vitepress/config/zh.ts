@@ -10,9 +10,9 @@ export const zh = defineConfig({
             // { text: "Home", link: "/zh" },
             { text: 'Design', link: '/zh/design/basic', activeMatch: '/zh/design/' },
             {
-                text: 'Development',
-                link: '/zh/development/setup',
-                activeMatch: '/zh/development',
+                text: 'Style',
+                link: '/zh/style/setup',
+                activeMatch: '/zh/style',
             },
         ],
 
@@ -37,15 +37,15 @@ export const zh = defineConfig({
                     // { text: "Layout Basics", link: "basic" },
                 ],
             },
-            '/zh/development/': {
-                base: '/zh/development/',
+            '/zh/style/': {
+                base: '/zh/style/',
                 items: [
                     {
-                        text: '快速开始',
+                        text: '简介',
                         items: [
                             {
-                                text: '下载',
-                                link: 'start/install',
+                                text: '快速开始',
+                                link: 'start/quick-start',
                             },
                             {
                                 text: '浏览器兼容',
@@ -104,6 +104,10 @@ export const zh = defineConfig({
                             {
                                 text: 'Position',
                                 link: 'utilities/position',
+                            },
+                            {
+                                text: 'Ratio',
+                                link: 'utilities/ratio',
                             },
                         ],
                     },

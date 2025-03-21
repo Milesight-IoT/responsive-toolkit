@@ -22,7 +22,7 @@ import {
 
 import 'vue-draggable-resizable/style.css';
 
-defineProps({
+const props = defineProps({
     title: {
         type: String,
         default: '',
@@ -39,13 +39,18 @@ defineProps({
         type: String,
         default: '/frames/default.html',
     },
+
+    defaultShowCode: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 // ---------- Render code source ----------
 const { isDark } = useData();
 const iframe = ref();
 const codeHtml = ref('');
-const showCode = ref(false);
+const showCode = ref(props.defaultShowCode);
 
 const source = computed(() => {
     return iframe.value ? getWhyframeSource(iframe.value) : undefined;

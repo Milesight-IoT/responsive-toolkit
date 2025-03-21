@@ -14,9 +14,9 @@ export const en = defineConfig({
             // { text: "Home", link: "/en" },
             { text: 'Design', link: '/design/basic', activeMatch: '/design/' },
             {
-                text: 'Development',
-                link: '/development/start/install',
-                activeMatch: '/development/',
+                text: 'Style',
+                link: '/style/start/install',
+                activeMatch: '/style/',
             },
         ],
 
@@ -42,15 +42,15 @@ export const en = defineConfig({
                     //   { text: "Layout Basics", link: "basic" },
                 ],
             },
-            '/development/': {
-                base: '/development/',
+            '/style/': {
+                base: '/style/',
                 items: [
                     {
-                        text: 'GETTING STARED',
+                        text: 'Introduction',
                         items: [
                             {
-                                text: 'Install',
-                                link: 'start/install',
+                                text: 'Quick Start',
+                                link: 'start/quick-start',
                             },
                             {
                                 text: 'Customize',
@@ -113,6 +113,10 @@ export const en = defineConfig({
                             {
                                 text: 'Position',
                                 link: 'utilities/position',
+                            },
+                            {
+                                text: 'Ratio',
+                                link: 'utilities/ratio',
                             },
                         ],
                     },

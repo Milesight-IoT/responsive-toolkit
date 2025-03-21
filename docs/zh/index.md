@@ -12,7 +12,7 @@ hero:
       link: /design/basic
     - theme: alt
       text: Get Started
-      link: /development/start/install
+      link: /style/start/quick-start
 
 features:
   - title: Feature A

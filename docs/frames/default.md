@@ -16,7 +16,7 @@ onMounted(() => {
 })
 </script>
 
-<!-- empty file to keep vitepress happy. see FrameDefaultLayout.vue -->
+<!-- empty file to keep vitepress happy. -->
 <div id="vp-app" class="frame-default" ref="el"></div>
 
 <style lang="scss" scoped>
@@ -25,7 +25,7 @@ onMounted(() => {
 }
 
 .frame-default :deep() {
-  /**********  Atomic class **********/
+  /**********  Atomic classes **********/
   .border-soft {
     border: 1px solid var(--vp-c-divider);
   }
@@ -47,19 +47,21 @@ onMounted(() => {
   }
 
   /**********  Demo Block **********/
-  .demo-columns {
-    [class*="col"] {
-      border: 1px solid var(--vp-c-brand-3);
-      background-color: var(--vp-c-brand-soft);
-    }
+  @mixin demo-block {
+    border: 1px solid var(--vp-c-brand-3);
+    background-color: var(--vp-c-brand-soft);
   }
 
-  .demo-grid {
-    > div,
-    [class*="g-col"] {
-      border: 1px solid var(--vp-c-brand-3);
-      background-color: var(--vp-c-brand-soft);
-    }
+  .demo-bps > div,
+  .demo-columns [class*="col"],
+  .demo-grid > div,
+  .demo-grid [class*="g-col"],
+  .demo-gutters [class^="col"] > div,
+  .demo-gutters-tight [class*="col-"],
+  .demo-display > div,
+  .demo-flex > div,
+  .demo-flex-nest > div > div {
+    @include demo-block;
   }
 }
 </style>

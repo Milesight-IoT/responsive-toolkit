@@ -223,3 +223,35 @@ Responsive Style 的栅格系统使用一系列容器、行和列来布局和对
   </div>
 </div>
 </Story>
+
+## 速查表
+
+| 类名         | 样式                              |
+| ------------ | --------------------------------- |
+| `.row`       | `display: flex; flex-wrap: wrap;` |
+| `.col`       | `flex: 1 0 0;`                    |
+| `.col-1`     | `width: 8.33333333%`              |
+| `.col-2`     | `width: 16.66666667%`             |
+| `.col-3`     | `width: 25%`                      |
+| `.col-4`     | `width: 33.33333333%`             |
+| `.col-5`     | `width: 41.66666667%`             |
+| `.col-6`     | `width: 50%`                      |
+| `.col-7`     | `width: 58.33333333%`             |
+| `.col-8`     | `width: 66.66666667%`             |
+| `.col-9`     | `width: 75%`                      |
+| `.col-10`    | `width: 83.33333333%`             |
+| `.col-11`    | `width: 91.66666667%`             |
+| `.col-12`    | `width: 100%`                     |
+| `.offset-1`  | `margin-left: 8.33333333%`        |
+| `.offset-2`  | `margin-left: 16.66666667%`       |
+| `.offset-3`  | `margin-left: 25%`                |
+| `.offset-4`  | `margin-left: 33.33333333%`       |
+| `.offset-5`  | `margin-left: 41.66666667%`       |
+| `.offset-6`  | `margin-left: 50%`                |
+| `.offset-7`  | `margin-left: 58.33333333%`       |
+| `.offset-8`  | `margin-left: 66.66666667%`       |
+| `.offset-9`  | `margin-left: 75%`                |
+| `.offset-10` | `margin-left: 83.33333333%`       |
+| `.offset-11` | `margin-left: 91.66666667%`       |
+
+> 以上所有类均支持响应式前缀，如 `sm:`, `md:`, `lg:`, `xl:`。
