@@ -154,7 +154,7 @@
                     }
                 }
 
-                @for $i from 1 through $rows {
+                @for $i from 2 through $rows {
                     .#{$prefix}g-rs-#{$i} {
                         grid-row-start: $i;
                     }
@@ -174,7 +174,7 @@
                 // Start with `1` because `0` is an invalid value.
                 // Ends with `$columns - 1` because offsetting by the width of an entire row isn't possible.
                 @for $i from 1 through ($columns - 1) {
-                    .#{$prefix}g-start-#{$i} {
+                    .#{$prefix}g-cs-#{$i} {
                         grid-column-start: $i;
                     }
                 }
