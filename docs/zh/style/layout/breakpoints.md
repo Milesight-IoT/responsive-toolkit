@@ -47,7 +47,7 @@ Responsive Style 中提供的所有工具类都支持响应式类前缀，所以
 <Story title="断点隐藏" defaultShowCode>
 <div class="demo-bps text-center p-4">
   <div class="d-none my-2"><b>Hide</b> on all screens</div>
-  <div class="sm:d-none my-2"><b>Hide</b> on lg and wider screens</div>
+  <div class="sm:d-none my-2"><b>Hide</b> on sm and wider screens</div>
   <div class="md:d-none my-2"><b>Hide</b> on md and wider screens</div>
   <div class="lg:d-none my-2"><b>Hide</b> on lg and wider screens</div>
   <div class="xl:d-none my-2"><b>Hide</b> on xl and wider screens</div>

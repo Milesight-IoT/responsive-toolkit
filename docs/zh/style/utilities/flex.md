@@ -284,14 +284,50 @@ Flex 工具类用于控制 Flex 布局。通过改变 `flex` 属性，可以实�
 
 ## 速查表
 
-| 类名           | 描述                   |
-| -------------- | ---------------------- |
-| `.order-first` | `order: -1 !important` |
-| `.order-1`     | `order: 1 !important`  |
-| `.order-2`     | `order: 2 !important`  |
-| `.order-3`     | `order: 3 !important`  |
-| `.order-4`     | `order: 4 !important`  |
-| `.order-5`     | `order: 5 !important`  |
-| `.order-last`  | `order: 6 !important`  |
+| 类名                       | 样式                             |
+| -------------------------- | -------------------------------- |
+| `.d-flex`                  | `display: flex`                  |
+| `.d-inline-flex`           | `display: inline-flex`           |
+| `.flex-fill`               | `flex: 1 1 auto`                 |
+| `.flex-row`                | `flex-direction: row`            |
+| `.flex-row-reverse`        | `flex-direction: row-reverse`    |
+| `.flex-column`             | `flex-direction: column`         |
+| `.flex-column-reverse`     | `flex-direction: column-reverse` |
+| `.flex-wrap`               | `flex-wrap: wrap`                |
+| `.flex-nowrap`             | `flex-wrap: nowrap`              |
+| `.flex-wrap-reverse`       | `flex-wrap: wrap-reverse`        |
+| `.justify-content-start`   | `justify-content: flex-start`    |
+| `.justify-content-end`     | `justify-content: flex-end`      |
+| `.justify-content-center`  | `justify-content: center`        |
+| `.justify-content-between` | `justify-content: space-between` |
+| `.justify-content-around`  | `justify-content: space-around`  |
+| `.justify-content-evenly`  | `justify-content: space-evenly`  |
+| `.align-items-start`       | `align-items: flex-start`        |
+| `.align-items-end`         | `align-items: flex-end`          |
+| `.align-items-center`      | `align-items: center`            |
+| `.align-items-baseline`    | `align-items: baseline`          |
+| `.align-items-stretch`     | `align-items: stretch`           |
+| `.align-content-start`     | `align-content: flex-start`      |
+| `.align-content-end`       | `align-content: flex-end`        |
+| `.align-content-center`    | `align-content: center`          |
+| `.align-content-between`   | `align-content: space-between`   |
+| `.align-content-around`    | `align-content: space-around`    |
+| `.align-content-stretch`   | `align-content: stretch`         |
+| `.align-self-start`        | `align-self: flex-start`         |
+| `.align-self-end`          | `align-self: flex-end`           |
+| `.align-self-center`       | `align-self: center`             |
+| `.align-self-baseline`     | `align-self: baseline`           |
+| `.align-self-stretch`      | `align-self: stretch`            |
+| `.flex-grow-0`             | `flex-grow: 0`                   |
+| `.flex-grow-1`             | `flex-grow: 1`                   |
+| `.flex-shrink-0`           | `flex-shrink: 0`                 |
+| `.flex-shrink-1`           | `flex-shrink: 1`                 |
+| `.order-first`             | `order: -1`                      |
+| `.order-1`                 | `order: 1`                       |
+| `.order-2`                 | `order: 2`                       |
+| `.order-3`                 | `order: 3`                       |
+| `.order-4`                 | `order: 4`                       |
+| `.order-5`                 | `order: 5`                       |
+| `.order-last`              | `order: 6`                       |
 
 > 以上所有类均支持响应式前缀，如 `sm:`, `md:`, `lg:`, `xl:`。

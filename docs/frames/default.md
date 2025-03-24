@@ -60,8 +60,30 @@ onMounted(() => {
   .demo-gutters-tight [class*="col-"],
   .demo-display > div,
   .demo-flex > div,
-  .demo-flex-nest > div > div {
+  .demo-flex-nest > div > div,
+  .demo-float > div,
+  .demo-spacing > div {
     @include demo-block;
+  }
+
+  .demo-object-fit > img {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    @include demo-block;
+  }
+
+  .demo-ratio > div {
+    display: inline-block;
+    width: 120px;
+    margin-right: 0.5rem;
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include demo-block;
+    }
   }
 }
 </style>

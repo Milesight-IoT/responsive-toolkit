@@ -4,7 +4,7 @@ import { useData } from 'vitepress';
 import { getWhyframeSource } from '@whyframe/core/utils';
 import { computed, ref, useTemplateRef, watch } from 'vue';
 import VueDraggableResizable from 'vue-draggable-resizable';
-import { useElementSize, useFullscreen } from '@vueuse/core';
+import { useElementSize, useElementVisibility, useFullscreen } from '@vueuse/core';
 
 import IconCode from '../icons/Code.vue';
 import IconCopy from '../icons/Copy.vue';
@@ -95,12 +95,20 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
         height: (!isFullscreen || !height) ? 150 : height - TOOLBAR_HEIGHT,
     };
 });
+
+// ---------- Load code frame when the container visible ----------
+const loadCodeFrame = ref(false);
+const isVisible = useElementVisibility(mainEle);
+watch(isVisible, (val) => {
+    if (val) loadCodeFrame.value = true;
+});
 </script>
 
 <template>
     <div class="story">
         <div ref="main" class="story-main" :class="[{ fullscreen: isFullscreen }]">
             <VueDraggableResizable
+                v-if="loadCodeFrame"
                 class="story-frame"
                 :draggable="false"
                 :handles="['mr']"
@@ -336,7 +344,6 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
     }
 
     &-code {
-        padding: 0 1.5rem;
         border-top: 1px solid var(--vp-c-divider);
         background-color: var(--vp-code-block-bg);
         overflow: auto;
@@ -344,7 +351,10 @@ watch([containerWidth, containerHeight, isFullscreen], ([width, height, isFullsc
         font-size: var(--vp-code-font-size);
 
         :deep(pre.shiki) {
+            margin: 0;
+            padding: 1rem 1.5rem;
             background-color: transparent !important;
+            overflow: auto;
         }
     }
 }

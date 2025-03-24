@@ -101,14 +101,22 @@ export const zh = defineConfig({
                                 text: 'Spacing',
                                 link: 'utilities/spacing',
                             },
-                            {
-                                text: 'Position',
-                                link: 'utilities/position',
-                            },
+                            // {
+                            //     text: 'Position',
+                            //     link: 'utilities/position',
+                            // },
                             {
                                 text: 'Ratio',
                                 link: 'utilities/ratio',
                             },
+                            {
+                                text: 'Object Fit',
+                                link: 'utilities/object-fit',
+                            },
+                            // {
+                            //     text: 'Font Size',
+                            //     link: 'utilities/font-size',
+                            // },
                         ],
                     },
                 ],

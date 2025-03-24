@@ -78,7 +78,7 @@ order: 230
 
 ## 网格排序
 
-通过使用 `.g-start-*` 类来调整网格项的顺序。`*` 为数字 `1~11`。
+通过使用 `.g-cs-*` 类来调整网格项的顺序。`*` 为数字 `1~11`。
 
 <Story title="网格排序">
 <div class="demo-grid grid text-center my-5">
@@ -107,11 +107,11 @@ order: 230
 <Story title="自定义跨行">
 <div class="demo-grid grid my-5">
   <div class="g-col-2 g-rs-1 g-re-2">.g-rs-1 .g-re-3</div>
-  <div class="g-col-2 g-start-3 g-rs-2 g-re-3">.g-rs-2 .g-re-3</div>
-  <div class="g-col-2 g-start-5 g-rs-3 g-re-4">.g-rs-3 .g-re-4</div>
-  <div class="g-col-2 g-start-7 g-rs-4 g-re-5">.g-rs-4 .g-re-5</div>
-  <div class="g-col-2 g-start-9 g-rs-5 g-re-6">.g-rs-5 .g-re-6</div>
-  <div class="g-col-2 g-start-11 g-rs-1 g-re-6">.g-rs-1 .g-re-6</div>
+  <div class="g-col-2 g-cs-3 g-rs-2 g-re-3">.g-rs-2 .g-re-3</div>
+  <div class="g-col-2 g-cs-5 g-rs-3 g-re-4">.g-rs-3 .g-re-4</div>
+  <div class="g-col-2 g-cs-7 g-rs-4 g-re-5">.g-rs-4 .g-re-5</div>
+  <div class="g-col-2 g-cs-9 g-rs-5 g-re-6">.g-rs-5 .g-re-6</div>
+  <div class="g-col-2 g-cs-11 g-rs-1 g-re-6">.g-rs-1 .g-re-6</div>
 </div>
 </Story>
 
@@ -122,8 +122,8 @@ order: 230
 <Story title="自定义行列">
 <div class="demo-grid grid text-center my-5" style="--ms-rows: 3; --ms-columns: 3;">
   <div>Auto-column</div>
-  <div class="g-start-2" style="grid-row: 2">Auto-column</div>
-  <div class="g-start-3" style="grid-row: 3">Auto-column</div>
+  <div class="g-cs-2 g-rs-2" style="grid-row: 2">Auto-column</div>
+  <div class="g-cs-3 g-rs-3" style="grid-row: 3">Auto-column</div>
 </div>
 </Story>
 
@@ -141,10 +141,10 @@ order: 230
 </div>
 </Story>
 
-当然，若只针对特定布局调整间距，也可直接修改 CSS 属性 `row-gap` 和 `column-gap`。
+当然，若只针对特定布局调整间距，也可直接使用内置的网格间距类（详细可查看 [Spacing](../utilities/spacing.md)）
 
 <Story title="自定义间距">
-<div class="demo-grid grid text-center my-5" style="row-gap: .5rem; column-gap: 0;">
+<div class="demo-grid grid text-center row-gap-2 column-gap-0 my-5">
   <div class="g-col-6">.g-col-6</div>
   <div class="g-col-6">.g-col-6</div>
 
