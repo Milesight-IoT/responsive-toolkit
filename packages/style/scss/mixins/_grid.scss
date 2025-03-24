@@ -154,7 +154,7 @@
                     }
                 }
 
-                @for $i from 2 through $rows {
+                @for $i from 1 through $rows {
                     .#{$prefix}g-rs-#{$i} {
                         grid-row-start: $i;
                     }

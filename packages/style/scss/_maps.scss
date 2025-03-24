@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'variables' as *;
+@use 'functions' as fun;
 
 // ---------- Spacing ----------
 $spacers: (
@@ -12,7 +13,7 @@ $spacers: (
     6: $spacer * 1.5,
 ) !default;
 
-$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+$negative-spacers: if($enable-negative-margins, fun.negativify-map($spacers), null) !default;
 $gutters: $spacers !default;
 
 // ---------- Utilities ----------
