@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { codeToHtml } from 'shiki';
-import { useData } from 'vitepress';
+import { useData, withBase } from 'vitepress';
 import { getWhyframeSource } from '@whyframe/core/utils';
 import { computed, ref, useTemplateRef, watch } from 'vue';
 import VueDraggableResizable from 'vue-draggable-resizable';
@@ -37,7 +37,7 @@ const props = defineProps({
     },
     src: {
         type: String,
-        default: '/frames/default.html',
+        default: withBase('/frames/default.html'),
     },
 
     defaultShowCode: {
@@ -131,7 +131,6 @@ watch(isVisible, (val) => {
                     data-why
                     class="story-iframe"
                     :title="title"
-                    :src="src"
                 >
                     <slot />
                 </iframe>

@@ -3,9 +3,10 @@ import { whyframe } from '@whyframe/core';
 import { whyframeVue } from '@whyframe/vue';
 
 const isProd = process.env.NODE_ENV === 'production';
+const base = !isProd ? '/' : '/responsive-toolkit/';
 
 export const shared = defineConfig({
-    base: !isProd ? '/' : '/responsive-toolkit/',
+    base,
 
     title: 'Responsive Toolkit',
     description:
@@ -31,7 +32,7 @@ export const shared = defineConfig({
                 /**
                  * vitepress doesn't support whyframe default html, so we need to use a custom one
                  */
-                defaultSrc: '/frames/default.html',
+                defaultSrc: `${base}frames/default.html`,
                 components: [{ name: 'Story', showSource: true }],
             }),
             whyframeVue({

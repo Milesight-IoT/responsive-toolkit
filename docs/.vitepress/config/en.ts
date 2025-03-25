@@ -15,7 +15,7 @@ export const en = defineConfig({
             { text: 'Design', link: '/design/basic', activeMatch: '/design/' },
             {
                 text: 'Style',
-                link: '/style/start/install',
+                link: '/style/start/quick-start',
                 activeMatch: '/style/',
             },
         ],
