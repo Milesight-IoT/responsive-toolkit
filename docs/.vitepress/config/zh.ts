@@ -11,7 +11,7 @@ export const zh = defineConfig({
             { text: 'Design', link: '/zh/design/basic', activeMatch: '/zh/design/' },
             {
                 text: 'Style',
-                link: '/zh/style/quick-start',
+                link: '/zh/style/start/quick-start',
                 activeMatch: '/zh/style',
             },
         ],
