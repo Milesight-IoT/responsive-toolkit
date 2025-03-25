@@ -37,6 +37,8 @@ export default defineConfig(
                     varsIgnorePattern: '^_',
                 },
             ],
+
+            'node/prefer-global/process': 'off',
         },
     },
 );

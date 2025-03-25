@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress';
 import { whyframe } from '@whyframe/core';
 import { whyframeVue } from '@whyframe/vue';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 export const shared = defineConfig({
     title: 'Responsive Toolkit',
     description:
@@ -22,6 +24,7 @@ export const shared = defineConfig({
     },
 
     vite: {
+        base: !isProd ? '/' : '/responsive-toolkit/',
         plugins: [
             whyframe({
                 /**
