@@ -5,6 +5,8 @@ import { whyframeVue } from '@whyframe/vue';
 const isProd = process.env.NODE_ENV === 'production';
 
 export const shared = defineConfig({
+    base: !isProd ? '/' : '/responsive-toolkit/',
+
     title: 'Responsive Toolkit',
     description:
     'A lightweight and powerful Toolkit for building responsive websites.',
@@ -24,7 +26,6 @@ export const shared = defineConfig({
     },
 
     vite: {
-        base: !isProd ? '/' : '/responsive-toolkit/',
         plugins: [
             whyframe({
                 /**
