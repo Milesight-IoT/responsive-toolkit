@@ -2,4 +2,4 @@
 "@milesight/responsive-style": patch
 ---
 
-Init the lib
+Renew docs
