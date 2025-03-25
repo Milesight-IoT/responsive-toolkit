@@ -6,6 +6,9 @@
     "files": [
         "dist"
     ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
     "scripts": {
         "dev": "echo \"No dev script provided for this package.\"",
         "build": "echo \"No build script provided for this package.\"",

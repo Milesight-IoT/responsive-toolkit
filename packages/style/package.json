@@ -7,6 +7,9 @@
         "dist",
         "scss"
     ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
     "exports": {
         "default": "./dist/index.css",
         "scss": "./scss/index.scss",
