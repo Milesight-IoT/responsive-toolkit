@@ -5,10 +5,12 @@
     "scripts": {
         "dev": "pnpm -r run dev",
         "build": "pnpm -r run build",
+        "build:pkgs": "pnpm --filter=@milesight/* -r run build",
         "changeset": "changeset",
         "docs:dev": "pnpm --stream --filter=docs dev",
         "docs:build": "pnpm --stream --filter=docs build",
         "docs:preview": "pnpm --stream --filter=docs preview",
+        "postinstall": "pnpm run build:pkgs",
         "prepare": "husky",
         "commitlint": "commitlint",
         "lint-staged": "lint-staged"
