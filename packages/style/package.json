@@ -18,6 +18,11 @@
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
     },
+    "repository": "git+https://github.com/Milesight-IoT/responsive-toolkit.git",
+    "homepage": "https://github.com/Milesight-IoT/responsive-toolkit",
+    "bugs": {
+        "url": "https://github.com/Milesight-IoT/responsive-toolkit/issues"
+    },
     "exports": {
         "default": "./dist/index.css",
         "scss": "./scss/index.scss",
