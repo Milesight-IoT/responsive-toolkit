@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Design Guide
-      link: /design/basic
+      link: /zh/design/basic
     - theme: alt
       text: Get Started
-      link: /style/start/quick-start
+      link: /zh/style/start/quick-start
 
 features:
   - title: Feature A
