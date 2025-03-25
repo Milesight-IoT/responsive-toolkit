@@ -1,5 +1,0 @@
----
-"@milesight/responsive-style": patch
----
-
-Init the lib
