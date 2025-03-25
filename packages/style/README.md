@@ -1,5 +1,9 @@
 # @milesight/responsive-style
 
+[![npm](https://img.shields.io/npm/v/@milesight/responsive-style)](https://www.npmjs.com/package/@milesight/responsive-style)
+
+---
+
 Responsive Style is a powerful yet easy-to-use CSS framework designed to help developers quickly build responsive websites. It provides a set of straightforward classes for creating flexible and scalable layouts.
 
 ## Installation
