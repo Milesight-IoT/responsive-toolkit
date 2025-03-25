@@ -12,6 +12,7 @@ export const shared = defineConfig({
     },
 
     themeConfig: {
+        // logo: { src: '/public/logo.png', width: 24 },
         socialLinks: [
             {
                 icon: 'github',
