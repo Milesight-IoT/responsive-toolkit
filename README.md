@@ -17,8 +17,8 @@ Please adhere to existing JavaScript and Sass styles though when submitting code
 
 Please take a moment to review the [guidelines for contributing](CONTRIBUTING.md).
 
-- [Bug reports](CONTRIBUTING.md#bugs)
-- [Feature requests](CONTRIBUTING.md#features)
+- [Bug reports](CONTRIBUTING.md#bug-reports)
+- [Feature requests](CONTRIBUTING.md#feature-requests)
 - [Pull requests](CONTRIBUTING.md#pull-requests)
 
 If you have any questions, please feel free to [open an issue](https://github.com/milesight-iot/responsive-toolkit/issues).
