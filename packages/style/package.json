@@ -7,6 +7,14 @@
         "dist",
         "scss"
     ],
+    "keywords": [
+        "responsive",
+        "style",
+        "css",
+        "scss",
+        "sass",
+        "less"
+    ],
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
     },
