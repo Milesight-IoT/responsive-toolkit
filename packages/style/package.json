@@ -30,7 +30,7 @@
     },
     "scripts": {
         "dev": "sass --watch scss:dist",
-        "build": "sass scss:dist",
+        "build": "sass scss:dist && sass -s compressed scss/index.scss dist/index.min.css",
         "lint": "eslint ./scss/* ",
         "lint:fix": "eslint --fix ./scss/*"
     },
