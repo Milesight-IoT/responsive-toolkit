@@ -4,7 +4,13 @@ order: 100
 
 # Quick Start
 
-[![npm](https://img.shields.io/npm/v/@milesight/responsive-style)](https://www.npmjs.com/package/@milesight/responsive-style)
+<p style="display:flex;gap: 4px;">
+  <a href="https://www.npmjs.com/package/@milesight/responsive-style" target="_blank">
+    <img alt="npm" src="https://img.shields.io/npm/v/@milesight/responsive-style" />
+  </a>
+  <img alt="Gzipped size" src="https://img.shields.io/bundlejs/size/%40milesight/responsive-style?label=Gzipped">
+  <img alt="License" src="https://img.shields.io/github/license/Milesight-IoT/responsive-toolkit" />
+</p>
 
 Responsive Style is a powerful yet easy-to-use CSS framework designed to help developers quickly build responsive websites. It provides a set of straightforward classes for creating flexible and scalable layouts.
 

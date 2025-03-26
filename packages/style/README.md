@@ -1,6 +1,8 @@
 # @milesight/responsive-style
 
 [![npm](https://img.shields.io/npm/v/@milesight/responsive-style)](https://www.npmjs.com/package/@milesight/responsive-style)
+![npm package minimized gzipped size (scoped)](https://img.shields.io/bundlejs/size/%40milesight/responsive-style?label=Gzipped)
+![GitHub License](https://img.shields.io/github/license/Milesight-IoT/responsive-toolkit)
 
 ---
 

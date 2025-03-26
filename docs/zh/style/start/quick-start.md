@@ -4,7 +4,13 @@ order: 100
 
 # 快速开始
 
-[![npm](https://img.shields.io/npm/v/@milesight/responsive-style)](https://www.npmjs.com/package/@milesight/responsive-style)
+<p style="display:flex;gap: 4px;">
+  <a href="https://www.npmjs.com/package/@milesight/responsive-style" target="_blank">
+    <img alt="npm" src="https://img.shields.io/npm/v/@milesight/responsive-style" />
+  </a>
+  <img alt="Gzipped size" src="https://img.shields.io/bundlejs/size/%40milesight/responsive-style?label=Gzipped">
+  <img alt="License" src="https://img.shields.io/github/license/Milesight-IoT/responsive-toolkit" />
+</p>
 
 Responsive Style 是一个功能强大且易于使用的 CSS 框架，旨在帮助开发人员快速构建响应式网站。它提供了一组简单的类，用于创建灵活和可扩展的布局。
 
