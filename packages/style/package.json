@@ -4,7 +4,7 @@
     "description": "A powerful, accessible, developer friendly Toolkit for building responsive websites.",
     "license": "MIT",
     "homepage": "https://github.com/Milesight-IoT/responsive-toolkit",
-    "repository": "git+https://github.com/Milesight-IoT/responsive-toolkit.git",
+    "repository": "https://github.com/Milesight-IoT/responsive-toolkit.git",
     "bugs": {
         "url": "https://github.com/Milesight-IoT/responsive-toolkit/issues"
     },
