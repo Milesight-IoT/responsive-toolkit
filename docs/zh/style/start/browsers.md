@@ -8,7 +8,7 @@ Responsive Style 支持所有主流浏览器和平台的 最新、稳定版本�
 
 对于其它使用了最新版本的 WebKit、Blink 或 Gecko 内核的浏览器，或者直接或间接调用了平台的 web view API，都不是明确被支持的。但是，Responsive Style 应该（大多数情况下）在这些浏览器中是能够正常显示和运行的。下面列出了更具体地支持情况。
 
-你可以在 .browserslistrc 文件 中找到 Bootstrap 所支持地浏览器及版本列表：
+你可以在 `.browserslistrc` 文件 中找到所有支持的浏览器及版本列表：
 
 ```plaintext
 # https://github.com/browserslist/browserslist#readme

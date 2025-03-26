@@ -10,7 +10,11 @@ Spacing 工具类可用于响应式地设置元素的间距。
 
 使用规范的简写类为元素分配响应式 `margin` 和 `padding` 值，包括对单个属性、所有属性以及垂直和水平属性的支持。
 
-类的命名规则遵循 `{property}{side}-{size}` 的格式，其中 `{property}` 是 `m`（外边距）或 `p`（内边距），`{side}` 是 `t`（顶部）、`b`（底部）、`s`（start, 在 LTR 中为左，在 RTL 中为右）、`e`（end, 在 LTR 中为右，在 RTL 中为左）或 `x`（水平）、 `y`（垂直），`{size}` 是从 `.25rem` 到 `3rem` 的间距值。若为空白，则表示 `margin` 或 `padding` 的所有方向。
+类的命名规则遵循 `{property}{side}-{size}` 的格式，其中：
+
+- `{property}` 是 `m`（外边距）或 `p`（内边距）；
+- `{side}` 是 `t`（顶部）、`b`（底部）、`s`（start, 在 LTR 中为左，在 RTL 中为右）、`e`（end, 在 LTR 中为右，在 RTL 中为左）或 `x`（水平）、 `y`（垂直）；
+- `{size}` 是从 `.25rem` 到 `1.5rem` 的间距值。若为空白，则表示 `margin` 或 `padding` 的所有方向。
 
 <Story title="常规元素间距">
 <div class="demo-spacing p-4">

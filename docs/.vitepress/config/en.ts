@@ -52,10 +52,10 @@ export const en = defineConfig({
                                 text: 'Quick Start',
                                 link: 'start/quick-start',
                             },
-                            {
-                                text: 'Customize',
-                                link: 'start/customize',
-                            },
+                            // {
+                            //     text: 'Customize',
+                            //     link: 'start/customize',
+                            // },
                             {
                                 text: 'Browser Support',
                                 link: 'start/browsers',
@@ -110,14 +110,22 @@ export const en = defineConfig({
                                 text: 'Spacing',
                                 link: 'utilities/spacing',
                             },
-                            {
-                                text: 'Position',
-                                link: 'utilities/position',
-                            },
+                            // {
+                            //     text: 'Position',
+                            //     link: 'utilities/position',
+                            // },
                             {
                                 text: 'Ratio',
                                 link: 'utilities/ratio',
                             },
+                            {
+                                text: 'Object Fit',
+                                link: 'utilities/object-fit',
+                            },
+                            // {
+                            //     text: 'Font Size',
+                            //     link: 'utilities/font-size',
+                            // },
                         ],
                     },
                 ],

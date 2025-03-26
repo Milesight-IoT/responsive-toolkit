@@ -3,10 +3,11 @@
     "version": "1.0.1",
     "description": "A powerful, accessible, developer friendly Toolkit for building responsive websites.",
     "license": "MIT",
-    "files": [
-        "dist",
-        "scss"
-    ],
+    "homepage": "https://github.com/Milesight-IoT/responsive-toolkit",
+    "repository": "git+https://github.com/Milesight-IoT/responsive-toolkit.git",
+    "bugs": {
+        "url": "https://github.com/Milesight-IoT/responsive-toolkit/issues"
+    },
     "keywords": [
         "responsive",
         "style",
@@ -15,18 +16,17 @@
         "sass",
         "less"
     ],
-    "publishConfig": {
-        "registry": "https://registry.npmjs.org/"
-    },
-    "repository": "git+https://github.com/Milesight-IoT/responsive-toolkit.git",
-    "homepage": "https://github.com/Milesight-IoT/responsive-toolkit",
-    "bugs": {
-        "url": "https://github.com/Milesight-IoT/responsive-toolkit/issues"
-    },
     "exports": {
         "default": "./dist/index.css",
         "scss": "./scss/index.scss",
         "sass": "./scss/index.scss"
+    },
+    "files": [
+        "dist",
+        "scss"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
     },
     "scripts": {
         "dev": "sass --watch scss:dist",

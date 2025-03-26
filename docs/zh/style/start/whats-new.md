@@ -2,4 +2,4 @@
 order: 140
 ---
 
-# What's New
+<!-- @include: ../../../../packages/style/CHANGELOG.md -->

@@ -8,7 +8,7 @@ Display 工具类用于控制元素的显示方式。通过改变 `display` 属�
 
 ## 基础用法
 
-<Story>
+<Story title="基础用法">
 <div class="demo-display text-center p-4">
   <div class="lg:d-none my-2"><b>Hide</b> on lg and wider screens</div>
   <div class="d-none lg:d-block my-2"><b>Show</b> on lg and wider screens</div>
