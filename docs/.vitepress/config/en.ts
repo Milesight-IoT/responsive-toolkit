@@ -99,7 +99,7 @@ export const en = defineConfig({
                                 link: 'utilities/display',
                             },
                             {
-                                text: 'flex',
+                                text: 'Flex',
                                 link: 'utilities/flex',
                             },
                             {
