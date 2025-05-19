@@ -17,10 +17,10 @@
         "less"
     ],
     "exports": {
-        "default": "./dist/index.css",
-        "less": "./less/index.less",
-        "scss": "./scss/index.scss",
-        "sass": "./scss/index.scss"
+        ".": "./dist/index.css",
+        "./less": "./less/index.less",
+        "./scss": "./scss/index.scss",
+        "./sass": "./scss/index.scss"
     },
     "files": [
         "dist",
