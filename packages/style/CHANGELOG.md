@@ -1,5 +1,11 @@
 # @milesight/responsive-style
 
+## 1.1.2
+
+### Patch Changes
+
+- e16849a: Fix media query errors
+
 ## 1.1.1
 
 ### Patch Changes
