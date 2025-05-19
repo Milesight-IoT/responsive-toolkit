@@ -1,0 +1,53 @@
+@import './maps.less';
+
+.media-breakpoint-up (@points, @content) {
+    @media (min-width: @points) {
+        @content();
+    }
+}
+
+.media-breakpoint-down (@points, @content) {
+    @media (max-width: @points) {
+        @content();
+    }
+}
+
+.media-breakpoint-between (@lower, @upper, @content) {
+    @media (min-width: @min) and (max-width: @max) {
+        @content();
+    }
+}
+
+.gen-styles (@props, @value) {
+    each(@props, .(@prop, @key) {
+        @{prop}: @value;
+    });
+}
+
+.gen-utils (@prefix: '', @utils: @utilities) {
+    each(@utils, .(@util, @key) {
+        each(@util[@values], .(@val, @key) {
+            @class: if(isdefined(@util[class]), @util[class], @util[property]);
+            @prop: @util[property];
+            @prop-key: if(isnumber(@key), @val, @key);
+            @name: if(@prop-key = '', @class, ~'@{class}-@{prop-key}');
+            @class-name: if(@prefix = '', @name, ~'@{prefix}\:@{name}');
+
+            .@{class-name} {
+                .gen-styles(@prop, @val);
+            }
+        });
+    });
+}
+
+.gen-breakpoints-utils (@mobile-first: @enable-mobile-first, @bps: @grid-breakpoints, @utils: @utilities) {
+    each(@bps, .(@bp, @prefix) {
+        @query: if(@mobile-first = true, '(min-width: @{bp})', '(max-width: @{bp})');
+
+        & when not (@bp = 0) {
+            @media @query {
+                .gen-utils(@prefix, @utils);
+            }
+        }
+    });
+}

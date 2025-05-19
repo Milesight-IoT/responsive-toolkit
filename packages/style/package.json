@@ -18,11 +18,13 @@
     ],
     "exports": {
         "default": "./dist/index.css",
+        "less": "./less/index.less",
         "scss": "./scss/index.scss",
         "sass": "./scss/index.scss"
     },
     "files": [
         "dist",
+        "less",
         "scss"
     ],
     "publishConfig": {
