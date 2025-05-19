@@ -18,9 +18,10 @@
     }
 }
 
-.gen-styles (@props, @value) {
+.gen-styles (@props, @value, @important: @enable-utilities-important) {
     each(@props, .(@prop, @key) {
-        @{prop}: @value;
+        @prop-value: if(@important = true, ~'@{value} !important', @value);
+        @{prop}: @prop-value;
     });
 }
 
@@ -42,7 +43,7 @@
 
 .gen-breakpoints-utils (@mobile-first: @enable-mobile-first, @bps: @grid-breakpoints, @utils: @utilities) {
     each(@bps, .(@bp, @prefix) {
-        @query: if(@mobile-first = true, '(min-width: @{bp})', '(max-width: @{bp})');
+        @query: if(@mobile-first = true, ~'(min-width: @{bp})', ~'(max-width: @{bp})');
 
         & when not (@bp = 0) {
             @media @query {
