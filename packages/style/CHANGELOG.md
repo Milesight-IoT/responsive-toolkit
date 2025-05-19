@@ -1,5 +1,15 @@
 # @milesight/responsive-style
 
+## 1.1.0
+
+### Minor Changes
+
+- b13f18a: Add Less styles
+
+### Patch Changes
+
+- 4fe7a68: Create compressed resource when build output
+
 ## 1.0.1
 
 ### Patch Changes
