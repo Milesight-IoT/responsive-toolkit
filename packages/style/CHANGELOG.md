@@ -1,5 +1,11 @@
 # @milesight/responsive-style
 
+## 1.1.3
+
+### Patch Changes
+
+- 6fa80ee: Update style exports
+
 ## 1.1.2
 
 ### Patch Changes
