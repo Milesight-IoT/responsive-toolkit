@@ -1,5 +1,11 @@
 # @milesight/responsive-style
 
+## 1.1.1
+
+### Patch Changes
+
+- 352b462: Add pre publish script
+
 ## 1.1.0
 
 ### Minor Changes
