@@ -36,6 +36,8 @@ export function useMediaQuery(
         initializeWithValue = true,
     }: UseMediaQueryOptions = {},
 ): boolean {
+    query = query?.replace(/^@media( ?)/m, '');
+
     const getMatches = (query: string): boolean => {
         if (IS_SERVER) {
             return defaultValue;
