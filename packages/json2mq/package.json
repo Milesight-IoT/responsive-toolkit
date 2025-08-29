@@ -3,6 +3,16 @@
     "version": "1.0.0",
     "description": "Convert JSON data to media query string",
     "license": "MIT",
+    "homepage": "https://github.com/Milesight-IoT/responsive-toolkit",
+    "repository": "https://github.com/Milesight-IoT/responsive-toolkit.git",
+    "bugs": {
+        "url": "https://github.com/Milesight-IoT/responsive-toolkit/issues"
+    },
+    "keywords": [
+        "responsive",
+        "json2mq",
+        "media query"
+    ],
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -19,7 +29,8 @@
         "test:watch": "vitest",
         "coverage": "vitest run --coverage",
         "lint": "eslint ./src/* ./tests/*",
-        "lint:fix": "eslint --fix ./src/* ./tests/*"
+        "lint:fix": "eslint --fix ./src/* ./tests/*",
+        "prepublish": "pnpm run build"
     },
     "devDependencies": {
         "@antfu/eslint-config": "^4.10.1",
