@@ -3,6 +3,25 @@
     "version": "0.1.0",
     "description": "React hooks and components for building responsive websites.",
     "license": "MIT",
+    "homepage": "https://github.com/Milesight-IoT/responsive-toolkit",
+    "repository": "https://github.com/Milesight-IoT/responsive-toolkit.git",
+    "bugs": {
+        "url": "https://github.com/Milesight-IoT/responsive-toolkit/issues"
+    },
+    "keywords": [
+        "responsive",
+        "react",
+        "hook",
+        "useMediaQuery",
+        "breakpoints"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        }
+    },
+    "types": "dist/index.d.ts",
     "files": [
         "dist"
     ],
@@ -10,13 +29,14 @@
         "registry": "https://registry.npmjs.org/"
     },
     "scripts": {
-        "dev": "echo \"No dev script provided for this package.\"",
-        "build": "echo \"No build script provided for this package.\"",
+        "dev": "tsup --watch",
+        "build": "tsup",
         "test": "vitest run",
         "test:watch": "vitest",
         "coverage": "vitest run --coverage",
         "lint": "eslint ./src/*",
-        "lint:fix": "eslint --fix ./src/*"
+        "lint:fix": "eslint --fix ./src/*",
+        "prepublish": "pnpm run build"
     },
     "peerDependencies": {
         "react": "^17 || ^18 || ^19"

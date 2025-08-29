@@ -1,3 +1,5 @@
+import type { OverridableStringUnion } from '../types';
+
 export interface BreakpointOverrides {}
 
 export type Breakpoint = OverridableStringUnion<
@@ -96,7 +98,7 @@ export const breakpointKeys = ['xs', 'sm', 'md', 'lg', 'xl'];
 const sortBreakpointsValues = (values: Breakpoints['values']) => {
     const breakpointsAsArray = Object.keys(values).map(key => ({
         key,
-        val: values[key],
+        val: values[key as Breakpoint],
     })) || [];
 
     // Sort in ascending order
@@ -109,7 +111,7 @@ const sortBreakpointsValues = (values: Breakpoints['values']) => {
             ...acc,
             [obj.key]: obj.val,
         };
-    }, {});
+    }, {} as Breakpoints['values']);
 };
 
 // Keep in mind that @media is inclusive by the CSS specification.
@@ -133,29 +135,42 @@ export default function createBreakpoints(breakpoints: BreakpointsOptions): Brea
         ...other
     } = breakpoints;
     const sortedValues = sortBreakpointsValues(values);
-    const keys = Object.keys(sortedValues);
+    const keys = Object.keys(sortedValues) as Breakpoint[];
 
     function up(key: Breakpoint | number) {
-        const value = typeof values[key] === 'number' ? values[key] : key;
+        const value = typeof values[key as Breakpoint] === 'number'
+            ? values[key as Breakpoint]
+            : key;
         return `@media (min-width:${value}${unit})`;
     }
 
     function down(key: Breakpoint | number) {
-        const value = typeof values[key] === 'number' ? values[key] : key;
+        const value = typeof values[key as Breakpoint] === 'number'
+            ? values[key as Breakpoint]
+            : key as number;
         return `@media (max-width:${value - step / 100}${unit})`;
     }
 
     function between(start: Breakpoint | number, end: Breakpoint | number) {
-        const endIndex = keys.indexOf(end);
+        const endIndex = keys.indexOf(end as Breakpoint);
+
         return (
-            `@media (min-width:${typeof values[start] === 'number' ? values[start] : start}${unit}) and `
-            + `(max-width:${(endIndex !== -1 && typeof values[keys[endIndex]] === 'number' ? values[keys[endIndex]] : end) - step / 100}${unit})`
+            `@media (min-width:${
+                typeof values[start as Breakpoint] === 'number'
+                    ? values[start as Breakpoint]
+                    : start
+            }${unit}) and `
+            + `(max-width:${(
+                endIndex !== -1 && typeof values[keys[endIndex] as Breakpoint] === 'number'
+                    ? values[keys[endIndex] as Breakpoint]
+                    : end as number
+            ) - step / 100}${unit})`
         );
     }
 
     function only(key: Breakpoint) {
         if (keys.indexOf(key) + 1 < keys.length) {
-            return between(key, keys[keys.indexOf(key) + 1]);
+            return between(key, keys[keys.indexOf(key) + 1] as Breakpoint);
         }
         return up(key);
     }
@@ -164,12 +179,12 @@ export default function createBreakpoints(breakpoints: BreakpointsOptions): Brea
         // handle first and last key separately, for better readability
         const keyIndex = keys.indexOf(key);
         if (keyIndex === 0) {
-            return up(keys[1]);
+            return up(keys[1] as Breakpoint);
         }
         if (keyIndex === keys.length - 1) {
-            return down(keys[keyIndex]);
+            return down(keys[keyIndex] as Breakpoint);
         }
-        return between(key, keys[keys.indexOf(key) + 1]).replace(
+        return between(key, keys[keys.indexOf(key) + 1] as Breakpoint).replace(
             '@media',
             '@media not all and',
         );
