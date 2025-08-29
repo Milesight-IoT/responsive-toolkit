@@ -1,19 +1,19 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
-        "declaration": true,
-        "pretty": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
         "jsx": "react-jsx",
-        "strict": true,
         "lib": ["ESNEXT", "DOM", "DOM.Iterable"],
+        "baseUrl": ".",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
         // use global types for vite's expect, describe, etc.
         "types": ["vitest/globals"],
-        "noImplicitReturns": true,
+        "strict": true,
         "noFallthroughCasesInSwitch": true,
-        "module": "ESNext",
-        "moduleResolution": "Bundler"
+        "noImplicitReturns": true,
+        "declaration": true,
+        "pretty": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true
     },
     "exclude": ["node_modules", "dist"]
 }
